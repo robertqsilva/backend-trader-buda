@@ -1,0 +1,1 @@
+create table forgot(token text, id int, email text)
