@@ -3,7 +3,6 @@ const usuario = require("../controllers/users");
 const validaRequisicao = require("../middleware/valid-body");
 const user_schema = require("../../services/validations/usuario-validations");
 const authTokenRequest = require("../controllers/token");
-const socket = require("../socket/socket");
 
 const router = Router();
 
