@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const router = require("./routers/router");
-const socket = require("../api/socket/socket");
 const cron = require("node-cron");
 const axios = require("axios");
 const app = express();
@@ -15,7 +14,7 @@ app.use(router);
 
 cron.schedule("*/2 * * * *", () => {
   axios
-    .get("https://api-fortune-tig.onrender.com/bot")
+    .get("https://buda-3k1x.onrender.com")
     .then((response) => {
       console.log("Solicitação de manutenção enviada com sucesso");
     })
@@ -26,6 +25,4 @@ cron.schedule("*/2 * * * *", () => {
       );
     });
 });
-
-socket.listen(process.env.PORT_SOCKET || 4000);
 app.listen(process.env.PORT);
