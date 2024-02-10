@@ -10,9 +10,9 @@ async function envioEmailConfirmaçãoCadastro(nome, link, email) {
   });
 
   transportador.sendMail({
-    from: `Robert <${process.env.MAIL_USER}`,
+    from: `Sniper Buda <${process.env.MAIL_FROM}`,
     to: `${nome} <${email}>`,
-    subject: "Condirmação de cadastro",
+    subject: "Confirmação de cadastro",
     html: htmlPage,
   });
 }
@@ -24,7 +24,7 @@ async function envioEmailNovaSenha(nome, link, email) {
   });
 
   transportador.sendMail({
-    from: `Robert <${process.env.MAIL_USER}`,
+    from: `Sniper Buda <${process.env.MAIL_FROM}`,
     to: `${nome} <${email}>`,
     subject: "Recuperação de senha",
     html: htmlPage,
