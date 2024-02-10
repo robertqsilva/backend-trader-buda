@@ -15,7 +15,7 @@ module.exports = {
         if (err) {
           return false;
         }
-        return usuario;
+        return usuario 
       }
     );
     return tokenValido;

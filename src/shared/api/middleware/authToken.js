@@ -1,4 +1,4 @@
-const { verificaToken } = require("../services/jwt/jwt");
+const { verificaToken } = require("../../services/jwt/jwt");
 
 const verificaLogin = async (req, res, next) => {
   const { authorization } = req.headers;
